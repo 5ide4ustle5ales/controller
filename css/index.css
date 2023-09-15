@@ -3,13 +3,7 @@ table {
   background-color: #dac7c7b7;
     vertical-align: bottom;
   margin-bottom: absolute;
-}
-td {
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  font-weight: bold;
-}
+
 .center {
   background-color: #ad03ad;
 color: white;
@@ -20,7 +14,7 @@ color: white;
   text-align: center;
   cursor: pointer;
 }
-.center:hover{
+.center: hover{
    background-color: #727;
 }
 .gray {
@@ -32,7 +26,7 @@ color: white;
   font-weight: bold;
   cursor: pointer;
 }
-.gray:hover {
+.gray: hover {
   background-color: #727;
     color: yellow;
 }
@@ -46,7 +40,7 @@ color: white;
   text-align: center;
   cursor: pointer;
 }
-.up:hover {
+.up: hover {
   background-color: #09617f;
     color: yellow;
 }
@@ -60,7 +54,7 @@ color: white;
   text-align: center;
   cursor: pointer;
 }
-.left:hover {
+.left: hover {
   background-color: #008000;
     color: yellow;
 }
@@ -74,7 +68,7 @@ border: 2px solid #7f0505;
   text-align: center;
   cursor: pointer;
 }
-.right:hover{
+.right: hover{
   background-color: #b60748;
     color: yellow;
 }
@@ -88,7 +82,7 @@ border: 2px solid #da7008ed;
   text-align: center;
   cursor: pointer;
 }
-.down:hover {
+.down: hover {
   background-color: #f77808;
     color: yellow;
 }
@@ -97,8 +91,7 @@ body {
   position: absolute;
 }
 
-  ccolor: black;
-}
+
 .center {
   background-color: #ad03ad;
 color: white;
