@@ -1,36 +1,39 @@
-// This function is called when the page loads.
-function onLoad() {
-  // Do something here.
+const tableController = document.getElementById('table-controller');
 
-  def move_left():
-  """Moves the table controller 7% to the left."""
-  available_width = window.innerWidth
-  table_controller_width = document.getElementById("table_controller").offsetWidth
-  new_x_position = available_width * 0.07
-  document.getElementById("table_controller").style.left = new_x_position - table_controller_width
+const upButton = tableController.querySelector('.up');
+const leftButton = tableController.querySelector('.left');
+const rightButton = tableController.querySelector('.right');
+const downButton = tableController.querySelector('.down');
 
-def move_down():
-  """Moves the table controller 7% down."""
-  available_height = window.innerHeight
-  table_controller_height = document.getElementById("table_controller").offsetHeight
-  new_y_position = available_height * 0.07
-  document.getElementById("table_controller").style.top = new_y_position
+upButton.addEventListener('click', moveTableUp);
+leftButton.addEventListener('click', moveTableLeft);
+rightButton.addEventListener('click', moveTableRight);
+downButton.addEventListener('click', moveTableDown);
 
-def move_right():
-  """Moves the table controller 7% to the right."""
-  available_width = window.innerWidth
-  table_controller_width = document.getElementById("table_controller").offsetWidth
-  new_x_position = available_width * 0.07
-  document.getElementById("table_controller").style.left = new_x_position
+function moveTableUp() {
+  // Move the table up by 7% of the screen height
+  const screenHeight = window.innerHeight;
+  const tableTop = tableController.offsetTop;
+  tableController.style.top = tableTop - screenHeight * 0.07 + 'px';
+}
 
-def move_up():
-  """Moves the table controller 7% up."""
-  available_height = window.innerHeight
-  table_controller_height = document.getElementById("table_controller").offsetHeight
-  new_y_position = available_height * 0.07
-  document.getElementById("table_controller").style.top = new_y_position - table_controller_height
+function moveTableLeft() {
+  // Move the table left by 7% of the screen width
+  const screenWidth = window.innerWidth;
+  const tableLeft = tableController.offsetLeft;
+  tableController.style.left = tableLeft - screenWidth * 0.07 + 'px';
+}
 
+function moveTableRight() {
+  // Move the table right by 7% of the screen width
+  const screenWidth = window.innerWidth;
+  const tableLeft = tableController.offsetLeft;
+  tableController.style.left = tableLeft + screenWidth * 0.07 + 'px';
+}
 
-
-
+function moveTableDown() {
+  // Move the table down by 7% of the screen height
+  const screenHeight = window.innerHeight;
+  const tableTop = tableController.offsetTop;
+  tableController.style.top = tableTop + screenHeight * 0.07 + 'px';
 }
