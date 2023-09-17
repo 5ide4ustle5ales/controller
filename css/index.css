@@ -111,3 +111,222 @@ td {
   background-color: #f77808;
   color: yellow;
 }
+"
+
+The CSS code you provided is for a simple game where the player can move a square around a grid using arrow keys. The grid is represented by a table, and the square is represented by a td element with the class center.
+
+The body element has a position: absolute property, which means that it is positioned relative to the browser window. This is necessary so that the table can be positioned at the bottom of the window using the margin-bottom: absolute; property.
+
+The table element has a position: relative property, which means that its child elements will be positioned relative to it. This is necessary so that the center element can be positioned in the center of the table using the top: 50%; and left: 50%; properties.
+
+The center element has a position: absolute property, which means that it is positioned relative to its parent element (the table element). This is necessary so that the element can be positioned in the center of the table.
+
+The other CSS classes (gray, up, left, right, and down) are used to style the different types of squares in the game. The gray class is used for the squares that cannot be moved, while the other classes are used for the squares that the player can move to.
+
+Overall, the CSS code you provided is well-written and easy to understand. It is also efficient, as it uses minimal CSS to achieve the desired effect.
+
+profile picture
+use javascript to generate event listeners to listen for button clicks from the table of left right down and up you create functions that will move the whole table 7% of the screen available to the corresponding Direction generate an HTML file that lays everything out putting the buttons into corresponding spots following the style from this code <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/index.css">
+<script src="js/index.js"></script>
+</head>
+<body><table id='table-controller'>
+  <tr>
+    <td class="gray"></td>
+    <td class="up">Up</td>
+    <td class="gray"></td>
+  </tr>
+  <tr>
+    <td class="left">Left</td>
+    <td class="center">Center</td>
+    <td class="right">Right</td>
+  </tr>
+  <tr>
+    <td class="gray"></td>
+    <td class="down">Down</td>
+    <td class="gray"></td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+To generate event listeners for button clicks from the table of left, right, down, and up, we can use the following JavaScript code:
+
+JavaScript
+const tableController = document.getElementById('table-controller');
+
+const upButton = tableController.querySelector('.up');
+const leftButton = tableController.querySelector('.left');
+const rightButton = tableController.querySelector('.right');
+const downButton = tableController.querySelector('.down');
+
+upButton.addEventListener('click', moveTableUp);
+leftButton.addEventListener('click', moveTableLeft);
+rightButton.addEventListener('click', moveTableRight);
+downButton.addEventListener('click', moveTableDown);
+
+function moveTableUp() {
+  // Move the table up by 7% of the screen height
+  const screenHeight = window.innerHeight;
+  const tableTop = tableController.offsetTop;
+  tableController.style.top = tableTop - screenHeight * 0.07 + 'px';
+}
+
+function moveTableLeft() {
+  // Move the table left by 7% of the screen width
+  const screenWidth = window.innerWidth;
+  const tableLeft = tableController.offsetLeft;
+  tableController.style.left = tableLeft - screenWidth * 0.07 + 'px';
+}
+
+function moveTableRight() {
+  // Move the table right by 7% of the screen width
+  const screenWidth = window.innerWidth;
+  const tableLeft = tableController.offsetLeft;
+  tableController.style.left = tableLeft + screenWidth * 0.07 + 'px';
+}
+
+function moveTableDown() {
+  // Move the table down by 7% of the screen height
+  const screenHeight = window.innerHeight;
+  const tableTop = tableController.offsetTop;
+  tableController.style.top = tableTop + screenHeight * 0.07 + 'px';
+}
+Use code with caution. Learn more
+To generate an HTML file that lays everything out putting the buttons into corresponding spots following the style from your code, we can use the following HTML code:
+
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/index.css">
+<script src="js/index.js"></script>
+</head>
+<body>
+<table id='table-controller'>
+  <tr>
+    <td class="gray"></td>
+    <td class="up">Up</td>
+    <td class="gray"></td>
+  </tr>
+  <tr>
+    <td class="left">Left</td>
+    <td class="center">Center</td>
+    <td class="right">Right</td>
+  </tr>
+  <tr>
+    <td class="gray"></td>
+    <td class="down">Down</td>
+    <td class="gray"></td>
+  </tr>
+</table>
+</body>
+</html>
+Use code with caution. Learn more
+This HTML code will create a table with three rows and three columns. The first and third columns will be gray, and the second column will contain the four buttons (Up, Left, Center, and Right). The buttons will be styled according to your CSS code.
+
+You can then add the JavaScript code above to your index.js file. Once you have done that, you can open the HTML file in a web browser and test the functionality of the buttons.
+
+profile picture
+show me css
+View other drafts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Here is an example of a simple CSS file:
+
+CSS
+body {
+  background-color: #ffffff;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+}
+Use code with caution. Learn more
+This CSS file will style the body of the web page to have a white background and a sans-serif font. It will also style the h1 and p elements to have certain font sizes and line heights. Finally, it will style the .button class to have a black background and white text.
+
+CSS can be used to style all aspects of a web page, including the font, color, size, spacing, and layout of the elements on the page. CSS can also be used to add animations and other effects to web pages.
+
+Here is an example of a more complex CSS file:
+
+CSS
+body {
+  background-color: #ffffff;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
+}
+
+.button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #333333;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+Use code with caution. Learn more
+This CSS file will style the body of the web page in the same way as the previous example, but it will also add some additional styling. For example, it will center the h1 element on the page and give it a black color. It will also give the .button element a rounded border and a transition effect so that it changes color when the user hovers over it. Finally, it will add a .container class to the page, which will center the content of the page horizontally.
+
+CSS is a powerful tool that can be used to create beautiful and responsive web pages. If you are interested in learning more about CSS, there are many resources available online and in libraries.
+
+Enter a prompt here
+Bard may display inaccurate or offensive information that doesn’t
